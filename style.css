@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: ommoMedium;
+  src: url("fonts/669f32bc30d3d2fcc581a946_PPNeueMontreal-Medium.ttf");
+}
+@font-face {
+  font-family: ommoBold;
+  src: url("fonts/669f32bc427a6e98c9b8777f_PPNeueMontreal-Bold.ttf");
+}
