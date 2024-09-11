@@ -56,13 +56,13 @@ textAnimation();
 var tl = gsap.timeline();
 
 tl.to(".video-text",{
-  y:-100,
+  y:-50,
   opacity: 0,
   duration: 0.2,
   delay: 0.5,
 
   scrollTrigger: {
-    markers: true,
+    // markers: true,
     scroller: "body",
     start: "9% 50%",
     end: "10% 90%",
@@ -76,9 +76,9 @@ tl.to(".video-text",{
 tl.to(".video-extend", {
   width: "95vw", 
   scrollTrigger: {
-    // markers: true,
+    markers: true,
     scroller: "body",
-    start: "10% 30%",
+    start: "15% 34%",
     end: "10% 80%",
     stagger: 0.4,
     scrub: 6,
