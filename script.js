@@ -55,31 +55,31 @@ textAnimation();
 
 var tl = gsap.timeline();
 
-// tl.to(".video-text",{
-//   opacity: 0,
-//   duration: 0.1,
-//   delay: 0.1,
+tl.to(".video-text",{
+  opacity: 0,
+  // duration: 0.1,
+  // delay: 0.1,
 
-//   scrollTrigger: {
-//     // markers: true,
-//     scroller: "body",
-//     start: "10% 40%",
-//     end: "10% 90%",
-//     stagger: 0.4,
-//     scrub:6,
-//     // ease:power,
-//   },
-// })
+  scrollTrigger: {
+    // markers: true,
+    scroller: "body",
+    start: "10% 30%",
+    end: "10% 90%",
+    stagger: 0.4,
+    scrub:6,
+    // ease:power,
+  },
+})
 
 
-// tl.to(".video-extend", {
-//   width: "95vw", 
-//   scrollTrigger: {
-//     markers: true,
-//     scroller: "body",
-//     start: "10% 30%",
-//     end: "10% 80%",
-//     stagger: 0.4,
-//     scrub: 6,
-//   },
-// });
+tl.to(".video-extend", {
+  width: "95vw", 
+  scrollTrigger: {
+    // markers: true,
+    scroller: "body",
+    start: "10% 30%",
+    end: "10% 80%",
+    stagger: 0.4,
+    scrub: 6,
+  },
+});
