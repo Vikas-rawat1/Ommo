@@ -72,14 +72,14 @@ var tl = gsap.timeline();
 // })
 
 
-tl.to(".video-extend", {
-  width: "95vw", 
-  scrollTrigger: {
-    markers: true,
-    scroller: "body",
-    start: "10% 30%",
-    end: "10% 80%",
-    stagger: 0.4,
-    scrub: 6,
-  },
-});
+// tl.to(".video-extend", {
+//   width: "95vw", 
+//   scrollTrigger: {
+//     markers: true,
+//     scroller: "body",
+//     start: "10% 30%",
+//     end: "10% 80%",
+//     stagger: 0.4,
+//     scrub: 6,
+//   },
+// });
