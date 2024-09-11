@@ -1,7 +1,7 @@
 var tl = gsap.timeline();
 
 tl.from(".main ", {
-  y: 50,
+  y: 10,
   stagger:0.25,
   duration:0.6,
   delay:0.2,
