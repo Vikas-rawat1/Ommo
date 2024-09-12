@@ -74,12 +74,42 @@ function textAnimation() {
     duration: 1.2,
     delay: 0.2,
     scrollTrigger: {
-      markers: true,
+      // markers: true,
       scroller: "body",
       start: "25% 40%",
       end: "10% 80%",
       stagger: 0.4,
       // scrub: 6,
+    },
+  });
+  gsap.from(".name-animation p,.testimonial-text", {
+    y: 250,
+    stagger: 0.25,
+    duration: 1.2,
+    delay: 0.2,
+    scrollTrigger: {
+      // markers: true,
+      trigger:"testimonial",
+      scroller: "body",
+      start: "55% 40%",
+      end: "60% 80%",
+      stagger: 0.4,
+      scrub: 6,
+    },
+  });
+  gsap.from(".line3 h1", {
+    y: 250,
+    stagger: 0.25,
+    duration: 1.2,
+    delay: 0.2,
+    scrollTrigger: {
+      // markers: true,
+      trigger:"approachAnimation",
+      scroller: "body",
+      start: "65% 40%",
+      end: "60% 80%",
+      stagger: 0.4,
+      scrub: 6,
     },
   });
 }
@@ -120,4 +150,19 @@ function videoAnimation() {
   });
 }
 
-videoAnimation();
+// videoAnimation();
+
+gsap.from(".page3",{
+  y: 100,
+  duration: 0.4,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger:"page3",
+    scroller: "body",
+    start: "80% 40%",
+    end: "70% 80%",
+    markers:true,
+    stagger: 0.4,
+    scrub: 6,
+  }
+})
