@@ -42,7 +42,7 @@ function cursorMovement() {
     });
   });
 }
-cursorMovement();
+// cursorMovement();
 
 function textAnimation() {
   var tl = gsap.timeline();
