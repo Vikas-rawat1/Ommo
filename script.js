@@ -215,7 +215,7 @@ function page3Animation() {
       scroller: "body",
       start: "-40% 50%",
       end: "30% 50%",
-      markers: true,
+      // markers: true,
       stagger: 0.4,
       scrub: 6,
     },
@@ -237,6 +237,7 @@ function page3Animation() {
     },
   });
 }
+
 cursorMovement();
 
 textAnimation();
