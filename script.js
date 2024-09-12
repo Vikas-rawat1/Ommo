@@ -50,8 +50,16 @@ function textAnimation() {
   // tl.to("#loader", {
   //   display: "none",
   // });
+  tl.from(".page1",{
+    y:1000,
+    duration: 0.6,
+    delay: 0.5,
+  })
+   tl.to("#loader", {
+    display: "none",
+  });
 
-  gsap.from(".line h1", {
+  tl.from(".line h1", {
     y: 250,
     stagger: 0.25,
     duration: 1.2,
@@ -64,18 +72,19 @@ textAnimation();
 
 var tl = gsap.timeline();
 
+
 tl.to(".video-text", {
   y: -50,
   opacity: 0,
-  duration: 0.2,
-  delay: 0.5,
+  duration: 0.4,
+  delay: 0.7,
 
   scrollTrigger: {
     // markers: true,
     scroller: "body",
     start: "9% 50%",
     end: "10% 90%",
-    stagger: 0.4,
+    stagger: 0.2,
     scrub: 6,
     // ease:power,
   },
