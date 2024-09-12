@@ -30,9 +30,14 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
-gsap.to("#cursor",{
-  
-})
+var cursor = document.querySelector("#cursor");
+
+window.addEventListener("mousemove", function (dets) {
+  gsap.to("#cursor", {
+    x: dets.x,
+    y: dets.y,
+  });
+});
 
 function textAnimation() {
   var tl = gsap.timeline();
