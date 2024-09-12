@@ -153,14 +153,14 @@ function videoAnimation() {
 // videoAnimation();
 
 gsap.from(".page3",{
-  y: 90,
-  duration: 0.4,
+  y: 150,
+  duration: 0.8,
   delay: 0.1,
   scrollTrigger: {
     trigger:".page3",
     scroller: "body",
-    start: "10% 70%",
-    end: "70% 80%",
+    start: "-30% 70%",
+    end: "30% 50%",
     markers:true,
     stagger: 0.4,
     scrub: 6,
