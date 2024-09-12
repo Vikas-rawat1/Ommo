@@ -30,11 +30,11 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
-var cursor=document.querySelector("#cursor");
+var cursor = document.querySelector("#cursor");
 
 function cursorMovement() {
   window.addEventListener("mousemove", function (dets) {
-    console.log(dets)
+    console.log(dets);
     gsap.to(cursor, {
       x: dets.x,
       y: dets.y,
@@ -89,7 +89,7 @@ function textAnimation() {
     delay: 0.2,
     scrollTrigger: {
       // markers: true,
-      trigger:"testimonial",
+      trigger: "testimonial",
       scroller: "body",
       start: "55% 40%",
       end: "60% 80%",
@@ -104,7 +104,7 @@ function textAnimation() {
     delay: 0.2,
     scrollTrigger: {
       // markers: true,
-      trigger:"approachAnimation",
+      trigger: "approachAnimation",
       scroller: "body",
       start: "65% 40%",
       end: "60% 80%",
@@ -115,7 +115,7 @@ function textAnimation() {
 }
 // loco();
 
-textAnimation();
+// textAnimation();
 
 function videoAnimation() {
   var tl = gsap.timeline();
@@ -151,18 +151,38 @@ function videoAnimation() {
 }
 
 // videoAnimation();
+function page3Animation() {
+  gsap.from(".page3", {
+    y: 150,
+    duration: 0.8,
+    delay: 0.1,
+    scrollTrigger: {
+      trigger: ".page3",
+      scroller: "body",
+      start: "-30% 70%",
+      end: "30% 50%",
+      // markers: true,
+      stagger: 0.4,
+      scrub: 6,
+    },
+  });
+}
+// page3Animation()
+var footer = document.querySelector(".footer-text");
 
-gsap.from(".page3",{
-  y: 150,
-  duration: 0.8,
-  delay: 0.1,
+gsap.from(".footer-text", {
+  // opacity: 0,
+  y: 100,
+  delay: 0.2,
+  duration: 1,
   scrollTrigger: {
-    trigger:".page3",
+    trigger: ".page3",
     scroller: "body",
-    start: "-30% 70%",
+    start: "40% 25%",
     end: "30% 50%",
-    markers:true,
+    markers: true,
     stagger: 0.4,
     scrub: 6,
-  }
-})
+  },
+
+});
