@@ -30,14 +30,17 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
-var cursor = document.querySelector("#cursor");
-
-window.addEventListener("mousemove", function (dets) {
-  gsap.to("#cursor", {
-    x: dets.x,
-    y: dets.y,
+function cursor() {
+  window.addEventListener("mousemove", function (dets) {
+    gsap.to("#cursor", {
+      x: dets.x,
+      y: dets.y,
+    });
   });
-});
+}
+
+  var cursor = document.querySelector("#cursor");
+cursor()
 
 function textAnimation() {
   var tl = gsap.timeline();
@@ -77,7 +80,6 @@ function textAnimation() {
       // scrub: 6,
     },
   });
-  
 }
 // loco();
 
@@ -107,7 +109,7 @@ function videoAnimation() {
     width: "95vw",
     scrollTrigger: {
       // markers: true,
-      // scroller: "body",
+      scroller: "body",
       start: "15% 34%",
       end: "10% 80%",
       stagger: 0.4,
