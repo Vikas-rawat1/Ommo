@@ -38,9 +38,7 @@ function cursor() {
     });
   });
 }
-
-  var cursor = document.querySelector("#cursor");
-cursor()
+cursor();
 
 function textAnimation() {
   var tl = gsap.timeline();
