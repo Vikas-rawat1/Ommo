@@ -155,11 +155,11 @@ function videoAnimation() {
 gsap.from(".page3",{
   y: 100,
   duration: 0.4,
-  delay: 0.5,
+  delay: 0.1,
   scrollTrigger: {
-    trigger:"page3",
+    // trigger:".page3",
     scroller: "body",
-    start: "80% 40%",
+    start: "80% 70%",
     end: "70% 80%",
     markers:true,
     stagger: 0.4,
