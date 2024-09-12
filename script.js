@@ -30,6 +30,8 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
+
+
 function textAnimation() {
   var tl = gsap.timeline();
   // tl.to("#loader", {
