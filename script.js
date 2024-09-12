@@ -52,13 +52,19 @@ function textAnimation() {
   // });
   tl.from(".page1",{
     y:1000,
-    duration: 0.6,
+    duration: 0.4,
     delay: 0.5,
   })
    tl.to("#loader", {
     display: "none",
   });
 
+  tl.to(".logo,.right-nav li", {
+    y: 30,
+    stagger: 0.25,
+    duration: 0.6,
+    delay: 0.4,
+  });
   tl.from(".line h1", {
     y: 250,
     stagger: 0.25,
