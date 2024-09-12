@@ -31,28 +31,46 @@ function loco() {
 }
 
 var cursor = document.querySelector("#cursor");
+var page2 = document.querySelector(".page2");
+var footer = document.querySelector(".footer-text");
 
 function cursorMovement() {
   window.addEventListener("mousemove", function (dets) {
-    console.log(dets);
+    // console.log(dets);
     gsap.to(cursor, {
       x: dets.x,
       y: dets.y,
       ease: "expoScale(0.5,7,none)",
     });
   });
+  page2.addEventListener("mouseenter", function (dets) {
+    // console.log(dets);
+    gsap.to(cursor, {
+      x: dets.x,
+      y: dets.y,
+      border: "2px solid black",
+      ease: "expoScale(0.5,7,none)",
+    });
+  });
+  page2.addEventListener("mouseleave", function (dets) {
+    // console.log(dets);
+    gsap.to(cursor, {
+      x: dets.x,
+      y: dets.y,
+      border: "2px solid white",
+      ease: "expoScale(0.5,7,none)",
+    });
+  });
 }
-// cursorMovement();
 
 function textAnimation() {
   var tl = gsap.timeline();
 
   tl.from(".page1", {
-    y: 1000,
+    // y: 1000,
     duration: 0.4,
     delay: 0.5,
-  });
-  tl.to("#loader", {
+  }).to("#loader", {
     display: "none",
   });
 
@@ -115,8 +133,6 @@ function textAnimation() {
 }
 // loco();
 
-// textAnimation();
-
 function videoAnimation() {
   var tl = gsap.timeline();
 
@@ -150,7 +166,6 @@ function videoAnimation() {
   });
 }
 
-// videoAnimation();
 function page3Animation() {
   gsap.from(".page3", {
     y: 150,
@@ -166,23 +181,27 @@ function page3Animation() {
       scrub: 6,
     },
   });
+
+  gsap.from(".footer-text", {
+    // opacity: 0,
+    y: 100,
+    delay: 0.2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".page3",
+      scroller: "body",
+      start: "40% 25%",
+      end: "30% 50%",
+      // markers: true,
+      stagger: 0.4,
+      scrub: 6,
+    },
+  });
 }
-// page3Animation()
-var footer = document.querySelector(".footer-text");
+cursorMovement();
 
-gsap.from(".footer-text", {
-  // opacity: 0,
-  y: 100,
-  delay: 0.2,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".page3",
-    scroller: "body",
-    start: "40% 25%",
-    end: "30% 50%",
-    markers: true,
-    stagger: 0.4,
-    scrub: 6,
-  },
+textAnimation();
 
-});
+videoAnimation();
+
+page3Animation();
