@@ -152,12 +152,12 @@ function videoAnimation() {
 
 // videoAnimation();
 
-gsap.from(".page3",{
+gsap.from("approachAnimation",{
   y: 100,
   duration: 0.4,
   delay: 0.1,
   scrollTrigger: {
-    // trigger:".page3",
+    trigger:".page3",
     scroller: "body",
     start: "80% 70%",
     end: "70% 80%",
