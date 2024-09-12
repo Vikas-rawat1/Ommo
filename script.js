@@ -124,7 +124,7 @@ function textAnimation() {
       // markers: true,
       trigger: "approachAnimation",
       scroller: "body",
-      start: "65% 40%",
+      start: "80% 40%",
       end: "60% 80%",
       stagger: 0.4,
       scrub: 6,
@@ -166,17 +166,56 @@ function videoAnimation() {
   });
 }
 
+function footerTextAnimation() {
+  var footerText = document.querySelectorAll(".footer-text p");
+  // var clutter = "";
+  footerText.forEach(function (elem) {
+    // console.log("elem")
+    var clutter = "";
+    var pText = elem.textContent;
+    // console.log(pText);
+    pSplittedText = pText.split("");
+    // console.log(pSplittedText);
+
+    pSplittedText.forEach(function (elem2) {
+      console.log(elem2);
+      clutter += `<span>${elem2}</span>`;
+    });
+    elem.innerHTML = clutter;
+  });
+}
+
+function fotterSinletextAnimation() {
+  var tl = gsap.timeline();
+
+  tl.to(".footer-text p span", {
+    // color: "red",
+    stagger: 0.2,
+    delay: 0.2,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".footer-text",
+      scroller: "body",
+      start: "10% 70%",
+      end: "30% 50%",
+      markers: true,
+      // stagger: 0.4,
+      scrub: 6,
+    },
+  });
+}
+
 function page3Animation() {
   gsap.from(".page3", {
-    y: 150,
+    y: 100,
     duration: 0.8,
     delay: 0.1,
     scrollTrigger: {
       trigger: ".page3",
       scroller: "body",
-      start: "-30% 70%",
+      start: "-40% 50%",
       end: "30% 50%",
-      // markers: true,
+      markers: true,
       stagger: 0.4,
       scrub: 6,
     },
@@ -201,6 +240,10 @@ function page3Animation() {
 cursorMovement();
 
 textAnimation();
+
+// footerTextAnimation();
+
+// fotterSinletextAnimation();
 
 videoAnimation();
 
