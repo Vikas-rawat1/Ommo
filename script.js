@@ -30,15 +30,19 @@ function loco() {
   ScrollTrigger.refresh();
 }
 
-function cursor() {
+var cursor=document.querySelector("#cursor");
+
+function cursorMovement() {
   window.addEventListener("mousemove", function (dets) {
-    gsap.to("#cursor", {
+    console.log(dets)
+    gsap.to(cursor, {
       x: dets.x,
       y: dets.y,
+      ease: "expoScale(0.5,7,none)",
     });
   });
 }
-cursor();
+cursorMovement();
 
 function textAnimation() {
   var tl = gsap.timeline();
