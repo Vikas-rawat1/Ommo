@@ -204,7 +204,7 @@ function fotterSinletextAnimation() {
     },
   });
 }
-   
+  
 function page3Animation() {
   gsap.from(".page3", {
     y: 100,
