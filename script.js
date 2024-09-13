@@ -203,7 +203,7 @@ function fotterSinletextAnimation() {
       scrub: 6,
     },
   });
-}
+} 
    
 function page3Animation() {
   gsap.from(".page3", {
