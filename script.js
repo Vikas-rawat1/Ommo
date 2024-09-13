@@ -199,7 +199,7 @@ function fotterSinletextAnimation() {
       start: "10% 70%",
       end: "30% 50%",
       markers: true,
-      // stagger: 0.4,
+      stagger: 0.4,
       scrub: 6,
     },
   });
