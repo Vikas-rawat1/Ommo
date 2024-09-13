@@ -74,12 +74,12 @@ function textAnimation() {
     display: "none",
   });
 
-  tl.to(".logo,.right-nav li", {
-    y: 30,
-    stagger: 0.25,
-    duration: 0.6,
-    delay: 0.4,
-  });
+  // tl.to(".logo,.right-nav li", {
+  //   y: 30,
+  //   stagger: 0.25,
+  //   duration: 0.6,
+  //   delay: 0.4,
+  // });
   tl.from(".line h1", {
     y: 250,
     stagger: 0.25,
