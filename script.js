@@ -164,7 +164,9 @@ function loco() {
     const locomotiveScroll = new LocomotiveScroll();
   })();
 }
-loco()
+
+loco();
+
 cursorMovement();
 
 textAnimation();
