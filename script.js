@@ -1,5 +1,37 @@
-function locoWork(){
-  
+function locoWork() {
+  gsap.registerPlugin(ScrollTrigger);
+  // function loco() {
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    pinType: document.querySelector("#main").style.transform
+      ? "transform"
+      : "fixed",
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+  ScrollTrigger.refresh();
+  return locoScroll;
+
+  // }
 }
 var cursor = document.querySelector("#cursor");
 var page2 = document.querySelector(".page2");
@@ -31,7 +63,7 @@ function cursorMovement() {
       ease: "expoScale(0.5,7,none)",
     });
   });
-} 
+}
 
 function textAnimation() {
   var tl = gsap.timeline();
@@ -213,7 +245,6 @@ Shery.imageEffect(".left-img", {
 cursorMovement();
 
 textAnimation();
-
 
 videoAnimation();
 
