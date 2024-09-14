@@ -119,7 +119,7 @@ function videoAnimation() {
     scrollTrigger: {
       // markers: true,
       scroller: "body",
-      start: "15% 34%",
+      start: "11% 34%",
       end: "10% 80%",
       stagger: 0.4,
       scrub: 6,
