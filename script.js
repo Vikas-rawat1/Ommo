@@ -245,6 +245,7 @@ function page3Animation() {
 Shery.imageEffect(".left-img", {
   style: 1 /*OR 5 for different variant */,
   debug: true,
+  // config:
 });
 
 
