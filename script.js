@@ -238,6 +238,10 @@ function page3Animation() {
   });
 }
 
+// gsap.to(".left-img",{
+//   scale:3
+// })
+
 Shery.imageEffect(".left-img", {
   style: 1 /*OR 5 for different variant */,
   debug: true,
