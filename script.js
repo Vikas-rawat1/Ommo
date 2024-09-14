@@ -1,4 +1,3 @@
-
 var cursor = document.querySelector("#cursor");
 var page2 = document.querySelector(".page2");
 
@@ -160,7 +159,12 @@ function page3Animation() {
     },
   });
 }
-
+function loco() {
+  (function () {
+    const locomotiveScroll = new LocomotiveScroll();
+  })();
+}
+loco()
 cursorMovement();
 
 textAnimation();
