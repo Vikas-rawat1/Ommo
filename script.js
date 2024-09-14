@@ -245,6 +245,7 @@ Shery.imageEffect(".left-img", {
     noise_scale: { value: 10, range: [0, 100] },
   },
 });
+
 locoWork();
 
 cursorMovement();
