@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-function loco() {
+// function loco() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
@@ -28,7 +28,9 @@ function loco() {
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
   ScrollTrigger.refresh();
-}
+  return locoScroll;
+
+// }
 
 var cursor = document.querySelector("#cursor");
 var page2 = document.querySelector(".page2");
@@ -107,7 +109,7 @@ function textAnimation() {
     delay: 0.2,
     scrollTrigger: {
       // markers: true,
-      trigger: "testimonial",
+      trigger: ".testimonial",
       scroller: "#main",
       start: "55% 40%",
       end: "60% 80%",
@@ -122,7 +124,7 @@ function textAnimation() {
     delay: 0.2,
     scrollTrigger: {
       // markers: true,
-      trigger: "approachAnimation",
+      trigger: ".approachAnimation",
       scroller: "#main",
       start: "80% 40%",
       end: "60% 80%",
@@ -243,9 +245,6 @@ cursorMovement();
 
 textAnimation();
 
-// footerTextAnimation();
-
-// fotterSinletextAnimation();
 
 videoAnimation();
 
