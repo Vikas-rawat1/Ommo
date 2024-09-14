@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+#main{
+  overflow: hidden;
+  position: relative;
+}
+
 @font-face {
   font-family: ommoMedium;
   src: url("fonts/669f32bc30d3d2fcc581a946_PPNeueMontreal-Medium.ttf");
