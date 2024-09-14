@@ -62,7 +62,7 @@ function cursorMovement() {
       ease: "expoScale(0.5,7,none)",
     });
   });
-}
+} 
 
 function textAnimation() {
   var tl = gsap.timeline();
