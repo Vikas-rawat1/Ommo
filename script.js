@@ -153,7 +153,7 @@ function page3Animation() {
       scroller: "body",
       start: "10% 90%",
       end: "30% 50%",
-      markers: true,
+      // markers: true,
       stagger: 0.4,
       scrub: 1,
     },
