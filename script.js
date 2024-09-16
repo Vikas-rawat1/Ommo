@@ -143,7 +143,7 @@ function page3Animation() {
     },
   });
 
-  gsap.from(".footer-text p ", {
+  gsap.from(".footer-text .footer-p1", {
     // opacity: 0,
     y: 100,
     delay: 0.2,
