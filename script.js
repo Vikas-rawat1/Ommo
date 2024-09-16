@@ -143,17 +143,17 @@ function page3Animation() {
     },
   });
 
-  gsap.from(".footer-text p", {
+  gsap.from(".footer-text p ", {
     // opacity: 0,
-    y: 100,
+    y: 200,
     delay: 0.2,
     duration: 1,
     scrollTrigger: {
       trigger: ".footer-text",
       scroller: "body",
-      start: "40% 25%",
+      start: "10% 90%",
       end: "30% 50%",
-      // markers: true,
+      markers: true,
       stagger: 0.4,
       scrub: 6,
     },
