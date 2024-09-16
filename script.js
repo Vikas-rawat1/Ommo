@@ -146,8 +146,8 @@ function page3Animation() {
   gsap.from(".footer-text .footer-p1", {
     // opacity: 0,
     y: 100,
-    delay: 0.2,
-    duration: 1,
+    delay: 0.1,
+    duration: 0.1,
     scrollTrigger: {
       trigger: ".footer-text",
       scroller: "body",
@@ -155,7 +155,7 @@ function page3Animation() {
       end: "30% 50%",
       markers: true,
       stagger: 0.4,
-      scrub: 6,
+      scrub: 1,
     },
   });
 }
