@@ -145,7 +145,7 @@ function page3Animation() {
 
   gsap.from(".footer-text p ", {
     // opacity: 0,
-    y: 200,
+    y: 100,
     delay: 0.2,
     duration: 1,
     scrollTrigger: {
