@@ -29,19 +29,20 @@
 
 <body>
   <div id="cursor" class="fixed w-10 h-10 border-white border-2 rounded-full z-[999] "></div>
-  <!-- <div id="loader" class="bg-white w-screen h-screen fixed top-0 z-[99]"></div> -->
+  <div id="loader" class="bg-white w-screen h-screen fixed top-0 z-[99]"></div>
   <div id="main">
     <div class="page1 bg-[#181818] w-full font-ommoMedium" >
       <div class="md:ml-4 md:mr-4 p-3">
-        <div class="hidden md:block nav text-[#E7E7E7] font-bold ">
-          <div class=" flex justify-between items-center">
+        <div class="nav text-[#E7E7E7] font-bold">
+          <div class="flex justify-between items-center">
             <h1 class="logo text-xl">OMMO®</h1>
-            <ul class="right-nav flex gap-4">
+            <ul class="right-nav md:flex gap-4 hidden md:block">
               <li>Work</li>
               <li>Approach</li>
               <li>About</li>
               <li>Start a project</li>
             </ul>
+            <p class="md:flex gap-4 md:hidden block text-xl">Menu</p>
           </div>
         </div>
 
