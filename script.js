@@ -174,9 +174,6 @@ function page3Animation() {
       scrub: 1,
     },
   });
-
-
-  
 }
 function loco() {
   (function () {
