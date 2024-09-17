@@ -104,7 +104,7 @@ function videoAnimation() {
     delay: 0.7,
 
     scrollTrigger: {
-      // markers: true,
+      markers: true,
       scroller: "body",
       start: "9% 50%",
       end: "10% 90%",
