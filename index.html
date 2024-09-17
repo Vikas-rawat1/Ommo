@@ -7,6 +7,7 @@
     rel="shortcut icon" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OMMO®</title>
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,7 +32,7 @@
   <div id="cursor" class="fixed w-10 h-10 border-white border-2 rounded-full z-[999] "></div>
   <div id="loader" class="bg-white w-screen h-screen fixed top-0 z-[99]"></div>
   <div id="main">
-    <div class="page1 bg-[#181818] w-full font-ommoMedium" >
+    <div class="page1 bg-[#181818] w-full font-ommoMedium">
       <div class="md:ml-4 md:mr-4 p-3">
         <div class="nav text-[#E7E7E7] font-bold">
           <div class="flex justify-between items-center">
@@ -66,8 +67,7 @@
             <video src="https://files.ommo.studio/ommo-reel.mp4" muted autoplay loop></video>
           </div>
           <div class="video-text relative mt-10">
-            <p
-              class="hidden md:block absolute bottom-[1vw] w-[44%] text-xl text-semibold text-[#E7E7E7] mb-20">
+            <p class=" md:block absolute bottom-[1vw] w-[44%] text-xl text-semibold text-[#E7E7E7] mb-20">
               Leading with
               the philosophy that
               every pixel has
@@ -113,7 +113,7 @@
         </div>
       </div>
     </div>
-    <div class="page2 bg-[#fff] font-ommoMedium" >
+    <div class="page2 bg-[#fff] font-ommoMedium">
       <div class=" ml-2 mr-2 md:ml-4 md:mr-4 md:p-3">
         <div class="flex justify-between items-center w-[90%]  md:w-[60%] mt-20">
           <h1 class="text-4xl md:text-8xl">WORK</h1>
@@ -207,7 +207,7 @@
       </div>
     </div>
 
-    <div class="page3 w-full bg-[#181818] overflow-hidden" >
+    <div class="page3 w-full bg-[#181818] overflow-hidden">
       <div class="page3-content ml-4 mr-4 md:p-3 text-[#DFDED9]">
         <h2 class="text-[6vw] w-[75%] md:text-[4.4vw] md:w-[80%] mt-12 md:mt-20 font-semibold">We are bridging the gap
           between design and development.
@@ -216,7 +216,7 @@
         <p class="text-3xl mt-12 md:text-7xl  md:mt-32 md:flex md:justify-end">→ Let's collab</p>
 
         <hr class="mt-10 md:mb-24 text-[#DFDED9]">
-        <div class="footer-text text-center text-[12vw] font-ommoBold overflow-hidden">
+        <div class="footer-text text-center text-[11vw] font-ommoBold overflow-hidden">
           <p class="footer-p1 hidden md:block mt-0">WE ARE OMMO®</p>
         </div>
         <p class="block md:hidden text-[24vw] font-ommoBold">OMMO®</p>
@@ -233,6 +233,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
     integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
 
   <!-- Locomotive js  -->
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>

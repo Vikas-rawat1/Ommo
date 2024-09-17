@@ -49,7 +49,7 @@ function textAnimation() {
     delay: 0.1,
   });
   gsap.from(".line2 h1", {
-    y: 250,
+    y: 350,
     stagger: 0.25,
     duration: 1.2,
     delay: 0.2,
@@ -98,14 +98,15 @@ function videoAnimation() {
   var tl = gsap.timeline();
 
   tl.to(".video-text", {
-    y: -50,
+    y: 100,
     opacity: 0,
     duration: 0.4,
     delay: 0.7,
 
     scrollTrigger: {
-      markers: true,
+      // markers: true,
       scroller: "body",
+      trigger: ".video-section",
       start: "9% 50%",
       end: "10% 90%",
       stagger: 0.2,
@@ -128,7 +129,22 @@ function videoAnimation() {
 }
 
 function page3Animation() {
-  gsap.from(".page3", {
+  var tl = gsap.timeline();
+  tl.from(".page3", {
+    y: 100,
+    duration: 0.8,
+    delay: 0.1,
+    scrollTrigger: {
+      trigger: ".page3",
+      scroller: "body",
+      start: "-40% 50%",
+      end: "30% 50%",
+      // markers: true,
+      stagger: 0.4,
+      scrub: 6,
+    },
+  });
+  tl.from(".page3-content", {
     y: 100,
     duration: 0.8,
     delay: 0.1,
@@ -143,7 +159,7 @@ function page3Animation() {
     },
   });
 
-  gsap.from(".footer-text .footer-p1", {
+  tl.from(".footer-text .footer-p1", {
     // opacity: 0,
     y: 100,
     delay: 0.1,
@@ -158,6 +174,9 @@ function page3Animation() {
       scrub: 1,
     },
   });
+
+
+  
 }
 function loco() {
   (function () {
@@ -165,6 +184,44 @@ function loco() {
   })();
 }
 
+Shery.imageEffect(".left-img ", {
+  style: 1,
+  gooey:true,
+  // debug: true,
+  config: {
+    noiseDetail: { value: 7.44, range: [0, 100] },
+    distortionAmount: { value: 2.98, range: [0, 10] },
+    scale: { value: 36.36, range: [0, 100] },
+    speed: { value: 0.32, range: [0, 1] },
+    zindex: { value: -9996999, range: [-9999999, 9999999] },
+    aspect: { value: 1.1634114980697632 },
+    ignoreShapeAspect: { value: true },
+    shapePosition: { value: { x: 0, y: 0 } },
+    shapeScale: { value: { x: 0.5, y: 0.5 } },
+    shapeEdgeSoftness: { value: 0, range: [0, 0.5] },
+    shapeRadius: { value: 0, range: [0, 2] },
+    currentScroll: { value: 0 },
+    scrollLerp: { value: 0.07 },
+    gooey: { value: false },
+    infiniteGooey: { value: false },
+    growSize: { value: 4, range: [1, 15] },
+    durationOut: { value: 1, range: [0.1, 5] },
+    durationIn: { value: 1.5, range: [0.1, 5] },
+    displaceAmount: { value: 0.5 },
+    masker: { value: true },
+    maskVal: { value: 1.18, range: [1, 5] },
+    scrollType: { value: 0 },
+    geoVertex: { range: [1, 64], value: 1 },
+    noEffectGooey: { value: true },
+    onMouse: { value: 0 },
+    noise_speed: { value: 0.2, range: [0, 10] },
+    metaball: { value: 0.2, range: [0, 2] },
+    discard_threshold: { value: 0.5, range: [0, 1] },
+    antialias_threshold: { value: 0.002, range: [0, 0.1] },
+    noise_height: { value: 0.5, range: [0, 2] },
+    noise_scale: { value: 10, range: [0, 100] },
+  },
+});
 loco();
 
 cursorMovement();
